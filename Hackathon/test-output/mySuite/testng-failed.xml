@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [mySuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listnerPackage.ListnerClass"/>
+    <listener class-name="listnerPackage.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="Test1(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testCases.TC_001_WebDevlopment">
+        <methods>
+          <include name="tearDown"/>
+          <include name="printInfo"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC_001_WebDevlopment -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="testCases.TC_004_FormFillDataDriven">
+        <methods>
+          <include name="tearDown"/>
+          <include name="dataFill" invocation-numbers="0 1 2 3 5 6 7 8"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC_004_FormFillDataDriven -->
+      <class name="testCases.TC_003_FormFill">
+        <methods>
+          <include name="fillingForm"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC_003_FormFill -->
+      <class name="testCases.TC_001_WebDevlopment">
+        <methods>
+          <include name="tearDown"/>
+          <include name="printInfo"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC_001_WebDevlopment -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [mySuite] -->
